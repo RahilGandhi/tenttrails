@@ -21,7 +21,7 @@ const userRoutes = require('./routes/users')
 const user = require('./models/user');
 
 //Connect to DB
-mongoose.connect('mongodb+srv://rahil10x:rahil10x@cluster0.umpp81b.mongodb.net/', {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
